@@ -1,0 +1,9 @@
+<div id="books"></div>
+
+<script type="text/javascript">
+  $(function() {
+  // Bookstore is the app name
+  window.router = new Bookstore.Routers.BooksRouter({books: <%= @books.to_json.html_safe -%>});
+  Backbone.history.start();
+  });
+</script>
